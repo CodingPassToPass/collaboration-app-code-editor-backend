@@ -12,7 +12,7 @@ dotenv.config();
 const server = createServer(app);
 const io = new Server(server,{ 
     cors: {
-        origin:"*",
+        origin:process.env.CLIENT_URL,
     },
 });
 
